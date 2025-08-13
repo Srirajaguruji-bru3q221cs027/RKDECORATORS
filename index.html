@@ -1,0 +1,1854 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RK Decorators - 35+ Years Trusted Painting & Building Maintenance in Coimbatore</title>
+    <meta name="description" content="35+ years experienced painting & civil contractors in Coimbatore. Free estimates for interior/exterior painting, plumbing, and electrical work. Call 9566413031!">
+    <meta name="keywords" content="Painting contractors Coimbatore, Building maintenance services, Interior painting experts, Civil contractors Coimbatore">
+    <link rel="canonical" href="https://rkdecorators.com">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "RK Decorators (RK Building Maintenance)",
+        "description": "35+ years experienced painting & civil contractors in Coimbatore",
+        "founder": {
+            "@type": "Person",
+            "name": "D. Rajesh Kumar"
+        },
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "RK Complex, 4-B, Lakshmipuram, Ganapathy",
+            "addressLocality": "Coimbatore",
+            "postalCode": "641006",
+            "addressRegion": "Tamil Nadu",
+            "addressCountry": "IN"
+        },
+        "telephone": "+91-9566-413031",
+        "alternativeTelephone": "+91-8825-588359",
+        "email": "rkdecorators@gmail.com",
+        "url": "https://rkdecorators.com",
+        "priceRange": "₹₹",
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Building Services",
+            "itemListElement": [
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Interior Painting"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Exterior Painting"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Wood Polishing"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Building Refurbishment"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Aluminum Fabrication"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Electrical Services"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Plumbing Services"}}
+            ]
+        }
+    }
+    </script>
+    
+    <style>
+        :root {
+            --night: #111718;
+            --apricot: #FACFAD;
+            --india-green: #118417;
+            --dark-green: #1F2505;
+            --linen: #F7EDE6;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--night);
+            overflow-x: hidden;
+        }
+        
+        /* Header & Navigation */
+        .navbar {
+            background: linear-gradient(135deg, var(--night) 0%, var(--dark-green) 100%);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(17, 23, 24, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .navbar.scrolled {
+            padding: 0.5rem 0;
+            background: rgba(17, 23, 24, 0.95);
+            backdrop-filter: blur(10px);
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+        
+        .logo {
+            color: var(--apricot);
+            font-size: 1.8rem;
+            font-weight: bold;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    height: 40px; /* Adjust as needed */
+    width: auto;
+}
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        .nav-links a {
+            color: var(--linen);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+        
+        .nav-links a:hover {
+            color: var(--india-green);
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--india-green);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        .cta-button {
+            background: linear-gradient(45deg, var(--india-green), #22c55e);
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 30px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(17, 132, 23, 0.3);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(17, 132, 23, 0.4);
+            background: linear-gradient(45deg, #22c55e, var(--india-green));
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, rgba(17, 23, 24, 0.9) 0%, rgba(31, 37, 5, 0.9) 100%), 
+                        linear-gradient(45deg, var(--apricot) 0%, var(--linen) 100%);
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><circle cx="50" cy="50" r="1" fill="rgba(250,207,173,0.1)"/></svg>');
+            animation: float 20s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+        }
+        
+        .hero-content {
+            max-width: 900px;
+            z-index: 2;
+            position: relative;
+        }
+        
+        .hero h1 {
+            font-size: 3.2rem;
+            margin-bottom: 1rem;
+            animation: slideInUp 1s ease-out;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            color: var(--apricot);
+        }
+        
+        .hero-subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            animation: slideInUp 1s ease-out 0.3s both;
+            color: var(--linen);
+        }
+        
+        .hero-cta {
+            background: linear-gradient(45deg, var(--india-green), #16a34a);
+            color: white;
+            padding: 18px 40px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 30px rgba(17, 132, 23, 0.4);
+            animation: slideInUp 1s ease-out 0.6s both;
+        }
+        
+        .hero-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(17, 132, 23, 0.6);
+            background: linear-gradient(45deg, #16a34a, var(--india-green));
+        }
+        
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            color: var(--night);
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(45deg, var(--india-green), #22c55e);
+            border-radius: 2px;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 4rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* About Section */
+        #about {
+            padding: 100px 0;
+            background: var(--linen);
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            margin-top: 3rem;
+        }
+        
+        .about-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--night);
+        }
+        
+        .about-text strong {
+            color: var(--india-green);
+        }
+        
+        .trust-signals {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .trust-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(17, 23, 24, 0.1);
+            transition: all 0.3s ease;
+            border-top: 4px solid var(--india-green);
+        }
+        
+        .trust-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(17, 23, 24, 0.15);
+        }
+        
+        .trust-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+        
+        .trust-item h3 {
+            color: var(--india-green);
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Services Section */
+        #services {
+            padding: 100px 0;
+            background: white;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+        
+        .service-category {
+            background: var(--linen);
+            padding: 3rem 2rem;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(17, 23, 24, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .service-category::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 6px;
+            background: linear-gradient(45deg, var(--india-green), #22c55e);
+            transition: left 0.3s ease;
+        }
+        
+        .service-category:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 60px rgba(17, 23, 24, 0.15);
+        }
+        
+        .service-category:hover::before {
+            left: 0;
+        }
+        
+        .service-category h3 {
+            color: var(--india-green);
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .service-list {
+            list-style: none;
+        }
+        
+        .service-list li {
+            color: var(--night);
+            margin-bottom: 1rem;
+            padding-left: 2rem;
+            position: relative;
+            font-size: 1.1rem;
+        }
+        
+        .service-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--india-green);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        .service-list li strong {
+            color: var(--dark-green);
+        }
+        
+        /* Projects Section */
+        #projects {
+            padding: 100px 0;
+            background: var(--linen);
+        }
+        
+        /* Project Filters */
+        .project-filters {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 3rem 0;
+            flex-wrap: wrap;
+        }
+        
+        .filter-btn {
+            background: white;
+            color: var(--night);
+            border: 2px solid var(--india-green);
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+        
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: var(--india-green);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(17, 132, 23, 0.3);
+        }
+        
+        /* Projects Gallery */
+        .projects-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .project-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(17, 23, 24, 0.1);
+            transition: all 0.4s ease;
+            cursor: pointer;
+            position: relative;
+            height: 280px;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(17, 23, 24, 0.2);
+        }
+        
+        .project-image {
+            height: 200px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .project-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            position: relative;
+        }
+        
+        .project-placeholder::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(17, 23, 24, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .project-card:hover .project-placeholder::before {
+            background: rgba(17, 23, 24, 0.4);
+        }
+        
+        .project-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            z-index: 2;
+            position: relative;
+            display: block;
+        }
+        
+        .project-preview-text {
+            z-index: 2;
+            position: relative;
+            font-size: 1.1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .project-preview-text small {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            display: block;
+            margin-top: 0.5rem;
+        }
+        
+        .project-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: white;
+            padding: 1.5rem;
+            transform: translateY(0);
+            transition: all 0.3s ease;
+        }
+        
+        .project-info h3 {
+            color: var(--night);
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+        
+        .project-info p {
+            color: var(--india-green);
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+        
+        .project-location {
+            color: #666;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+        
+        /* Projects CTA */
+        .projects-cta {
+            text-align: center;
+            margin-top: 4rem;
+        }
+        
+        .view-all-btn {
+            background: linear-gradient(45deg, var(--india-green), #22c55e);
+            color: white;
+            padding: 15px 35px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            display: inline-block;
+            margin-bottom: 1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 20px rgba(17, 132, 23, 0.3);
+        }
+        
+        .view-all-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(17, 132, 23, 0.4);
+            background: linear-gradient(45deg, #22c55e, var(--india-green));
+        }
+        
+        /* Image Modal */
+        .image-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(17, 23, 24, 0.95);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(5px);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .image-modal.show {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .image-modal-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            max-width: 90%;
+            max-height: 90%;
+            position: relative;
+            box-shadow: 0 25px 60px rgba(0,0,0,0.3);
+            animation: modalSlideIn 0.3s ease-out;
+        }
+        
+        .image-modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+        
+        .image-modal h3 {
+            color: var(--india-green);
+            margin: 0;
+            font-size: 1.5rem;
+        }
+        
+        .image-modal p {
+            color: #666;
+            margin-top: 0.5rem;
+            line-height: 1.6;
+        }
+        
+        .modal-close {
+            background: none;
+            border: none;
+            font-size: 2rem;
+            cursor: pointer;
+            color: #666;
+            transition: color 0.3s ease;
+            padding: 0;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .modal-close:hover {
+            color: var(--india-green);
+        }
+        
+        .image-placeholder-large {
+            width: 100%;
+            height: 400px;
+            background: linear-gradient(135deg, var(--apricot) 0%, var(--linen) 100%);
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: var(--night);
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin: 1rem 0;
+            border: 3px dashed var(--india-green);
+        }
+        
+        .image-placeholder-large .placeholder-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            color: var(--india-green);
+        }
+        
+        .image-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 1rem;
+        }
+        
+        .image-action-btn {
+            background: var(--india-green);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .image-action-btn:hover {
+            background: #22c55e;
+            transform: translateY(-2px);
+        }
+        
+        .image-action-btn.secondary {
+            background: transparent;
+            border: 2px solid var(--india-green);
+            color: var(--india-green);
+        }
+        
+        .image-action-btn.secondary:hover {
+            background: var(--india-green);
+            color: white;
+        }
+        
+        /* Contact Section */
+        #contact {
+            padding: 100px 0;
+            background: var(--night);
+            color: white;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            margin-top: 3rem;
+        }
+        
+        .contact-info h3 {
+            color: var(--apricot);
+            margin-bottom: 2rem;
+            font-size: 1.5rem;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            padding: 1rem;
+            background: rgba(250, 207, 173, 0.1);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-item:hover {
+            background: rgba(250, 207, 173, 0.2);
+            transform: translateX(10px);
+        }
+        
+        .contact-icon {
+            font-size: 1.5rem;
+            color: var(--india-green);
+        }
+        
+        .contact-item a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .contact-item a:hover {
+            color: var(--apricot);
+        }
+        
+        .map-container {
+            background: var(--dark-green);
+            border-radius: 15px;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .map-placeholder {
+            text-align: center;
+            color: var(--apricot);
+        }
+        
+        /* Footer */
+        .footer {
+            background: var(--dark-green);
+            color: var(--linen);
+            padding: 3rem 0 1rem;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            color: var(--apricot);
+        }
+        
+        .footer-section a {
+            color: var(--linen);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-section a:hover {
+            color: var(--india-green);
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(250, 207, 173, 0.2);
+            padding-top: 1rem;
+            text-align: center;
+            color: rgba(247, 237, 230, 0.7);
+        }
+        
+        /* WhatsApp Float Button */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            right: 40px;
+            background: #25D366;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 30px;
+            line-height: 60px;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            z-index: 1000;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            animation: pulse 2s infinite;
+        }
+        
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 30px rgba(37, 211, 102, 0.6);
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        /* Mobile Menu */
+        .mobile-menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 4px;
+        }
+        
+        .mobile-menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background: var(--apricot);
+            transition: all 0.3s ease;
+        }
+        
+        /* Scroll animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--night);
+                flex-direction: column;
+                padding: 2rem;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+            
+            .mobile-menu-toggle {
+                display: flex;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .section-title {
+                font-size: 2.2rem;
+            }
+            
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .projects-gallery {
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+                gap: 1.5rem;
+            }
+            
+            .project-filters {
+                gap: 0.5rem;
+            }
+            
+            .filter-btn {
+                padding: 8px 16px;
+                font-size: 0.8rem;
+            }
+            
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .whatsapp-float {
+                bottom: 20px;
+                right: 20px;
+                width: 50px;
+                height: 50px;
+                line-height: 50px;
+                font-size: 25px;
+            }
+            
+            .image-modal-content {
+                padding: 1.5rem;
+                margin: 1rem;
+            }
+            
+            .image-placeholder-large {
+                height: 250px;
+                font-size: 1rem;
+            }
+            
+            .image-placeholder-large .placeholder-icon {
+                font-size: 3rem;
+            }
+            
+            .image-actions {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .nav-container {
+                padding: 0 1rem;
+            }
+            
+            .container {
+                padding: 0 1rem;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .projects-gallery {
+                grid-template-columns: 1fr;
+            }
+            
+            .project-filters {
+                flex-direction: column;
+                align-items: center;
+                gap: 0.5rem;
+            }
+            
+            .filter-btn {
+                width: 200px;
+                text-align: center;
+            }
+            
+            .project-card {
+                height: 260px;
+            }
+            
+            .trust-signals {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+<a href="#" class="logo" alt="RK Decorators Building Maintenance Coimbatore">
+    <img src="assets\images\logo.png" alt="RK Decorators Logo">
+    <span>RK Decorators</span>
+</a>            <ul class="nav-links" id="navLinks">
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#projects">Our Works</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <a href="tel:+919566413031" class="cta-button">Call Now</a>
+            <div class="mobile-menu-toggle" id="mobileToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>"35+ Years of Trusted Painting & Building Care in Coimbatore"</h1>
+            <p class="hero-subtitle">Expert Civil Contractors for Interior/Exterior Painting, Woodwork, Electrical, and Plumbing Services</p>
+            <a href="#contact" class="hero-cta">Get a Free Estimate Today</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title fade-in">Your Partner in Quality Construction & Renovation</h2>
+            <div class="about-content">
+                <div class="about-text fade-in">
+                    <p><strong>RK Decorators (RK Building Maintenance)</strong> is a Self-owned contracting business serving Coimbatore for decades. Founded by<br> <strong>D. Rajesh Kumar</strong>,<br> we specialize in:</p>
+                    <br>
+                    <ul style="list-style: none; padding-left: 0;">
+                        <li style="margin-bottom: 0.8rem; padding-left: 2rem; position: relative;">
+                            <span style="position: absolute; left: 0; color: var(--india-green); font-weight: bold;">🎨</span>
+                            <strong>Interior & Exterior Painting</strong>
+                        </li>
+                        <li style="margin-bottom: 0.8rem; padding-left: 2rem; position: relative;">
+                            <span style="position: absolute; left: 0; color: var(--india-green); font-weight: bold;">🏗️</span>
+                            <strong>Building Refurbishment & Wood Polishing</strong>
+                        </li>
+                        <li style="margin-bottom: 0.8rem; padding-left: 2rem; position: relative;">
+                            <span style="position: absolute; left: 0; color: var(--india-green); font-weight: bold;">🔧</span>
+                            <strong>Aluminum Fabrication & False Ceiling Work</strong>
+                        </li>
+                        <li style="margin-bottom: 0.8rem; padding-left: 2rem; position: relative;">
+                            <span style="position: absolute; left: 0; color: var(--india-green); font-weight: bold;">⚡</span>
+                            <strong>Electrical & Plumbing Services</strong>
+                        </li>
+                    </ul>
+                    <br>
+                    <p>We blend traditional craftsmanship with modern techniques to deliver durable, aesthetic results.</p>
+                </div>
+                <div class="trust-signals fade-in">
+                    <div class="trust-item">
+                        <span class="trust-icon">🏆</span>
+                        <h3>35+ Years Experience</h3>
+                        <p>Decades of trusted service in Coimbatore</p>
+                    </div>
+                    <div class="trust-item">
+                        <span class="trust-icon">🤝</span>
+                        <h3>Trusted Partner</h3>
+                        <p>Manintance Associate of CSD Coimbatore Station Canteen Division</p>
+                    </div>
+                    <div class="trust-item">
+                        <span class="trust-icon">😊</span>
+                        <h3>100+ Satisfied Clients</h3>
+                        <p>Happy customers across Coimbatore</p>
+                    </div>
+                    <div class="trust-item">
+                        <span class="trust-icon"></span>
+                        <h3>Expirienced workers</h3>
+                        <p>Expirience over 20+ years</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <div class="container">
+            <h2 class="section-title fade-in">Comprehensive Building Solutions in Coimbatore</h2>
+            <p class="section-subtitle fade-in">Professional services delivered with precision and quality materials</p>
+            
+            <div class="services-grid">
+                <div class="service-category fade-in">
+                    <h3><span>🎨</span> Painting Services</h3>
+                    <ul class="service-list">
+                        <li><strong>Interior Painting:</strong> Premium finishes for homes/offices</li>
+                        <li><strong>Exterior Painting:</strong> Weather-resistant coatings</li>
+                        <li><strong>Wood Polishing:</strong> Restore & protect wooden surfaces</li>
+                    </ul>
+                </div>
+                
+                <div class="service-category fade-in">
+                    <h3><span>🏗️</span> Civil & Maintenance Works</h3>
+                    <ul class="service-list">
+                        <li><strong>Building Refurbishment:</strong> Crack repair, waterproofing</li>
+                        <li><strong>Aluminum Fabrication:</strong> Windows, partitions</li>
+                        <li><strong>False Ceiling Work:</strong> Modern ceiling solutions</li>
+                    </ul>
+                </div>
+                
+                <div class="service-category fade-in">
+                    <h3><span>⚡</span> Electrical & Plumbing</h3>
+                    <ul class="service-list">
+                        <li><strong>Electrical Services:</strong> Safe, code-compliant installations</li>
+                        <li><strong>Plumbing Services:</strong> Complete plumbing solutions</li>
+                        <li><strong>Maintenance:</strong> Regular upkeep and repairs</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+<section id="projects">
+    <div class="container">
+        <h2 class="section-title fade-in">Our Projects - Real Work, Real Results</h2>
+        <p class="section-subtitle fade-in">Browse through our completed projects showcasing 35+ years of expertise in painting and building maintenance across Coimbatore</p>
+        
+        <!-- Project Categories Filter -->
+        <div class="project-filters fade-in">
+            <button class="filter-btn active" onclick="filterProjects('all')">All Projects</button>
+            <button class="filter-btn" onclick="filterProjects('interior-painting')">Interior Painting</button>
+            <button class="filter-btn" onclick="filterProjects('exterior-painting')">Exterior Painting</button>
+            <button class="filter-btn" onclick="filterProjects('civil-works')">Civil Works</button>
+            <button class="filter-btn" onclick="filterProjects('maintenance')">Maintenance</button>
+        </div>
+        
+        <!-- Projects Grid -->
+        <div class="projects-gallery fade-in" id="projectsGallery">
+            <!-- Interior Painting 1 -->
+            <div class="project-card" data-category="interior-painting" onclick="openImageModal('assets/images/projects/interior-painting/interior_painting_1.jpg', 'Modern Living Room Interior Painting', 'Premium interior painting with designer colors for residential property in Ganapathy, Coimbatore')">
+                <div class="project-image">
+                    <img src="assets/images/projects/interior-painting/interior_painting_1.jpg" alt="Interior painting project by RK Decorators" loading="lazy">
+                </div>
+                <div class="project-overlay">
+                    <div class="project-info">
+                        <h3>Modern Living Room</h3>
+                        <p>Interior Painting</p>
+                        <span class="project-location">📍 Ganapathy, Coimbatore</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Exterior Painting 1 -->
+            <div class="project-card" data-category="exterior-painting" onclick="openImageModal('assets/images/projects/exterior-painting/exterior_painting_1.jpg', 'Commercial Building Exterior Painting', 'Weather-resistant exterior painting for commercial building with premium quality paints')">
+                <div class="project-image">
+                    <img src="assets/images/projects/exterior-painting/exterior_painting_1.jpg" alt="Exterior painting project by RK Decorators" loading="lazy">
+                </div>
+                <div class="project-overlay">
+                    <div class="project-info">
+                        <h3>Commercial Complex</h3>
+                        <p>Exterior Painting</p>
+                        <span class="project-location">📍 Lakshmipuram, Coimbatore</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Wood Polishing -->
+            <div class="project-card" data-category="interior-painting" onclick="openImageModal('assets/images/projects/wood-polishing/wood_polishing_1.jpg', 'Wooden Furniture Polishing', 'Professional wood polishing and restoration service bringing back natural shine')">
+                <div class="project-image">
+                    <img src="assets/images/projects/wood-polishing/wood_polishing_1.jpg" alt="Wood polishing project by RK Decorators" loading="lazy">
+                </div>
+                <div class="project-overlay">
+                    <div class="project-info">
+                        <h3>Wooden Furniture</h3>
+                        <p>Wood Polishing</p>
+                        <span class="project-location">📍 Residential Project</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Aluminum Work -->
+            <div class="project-card" data-category="civil-works" onclick="openImageModal('assets/images/projects/aluminum-work/aluminum_work_1.jpg', 'Aluminum Window Fabrication', 'Custom aluminum window installation with modern design and quality materials')">
+                <div class="project-image">
+                    <img src="assets/images/projects/aluminum-work/aluminum_work_1.jpg" alt="Aluminum fabrication by RK Decorators" loading="lazy">
+                </div>
+                <div class="project-overlay">
+                    <div class="project-info">
+                        <h3>Aluminum Windows</h3>
+                        <p>Fabrication Work</p>
+                        <span class="project-location">📍 Office Complex</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Civil Works -->
+            <div class="project-card" data-category="civil-works" onclick="openImageModal('assets/images/projects/civil-works/civil_work_1.jpg', 'Building Renovation Project', 'Complete building renovation including structural repairs and refurbishment')">
+                <div class="project-image">
+                    <img src="assets/images/projects/civil-works/civil_work_1.jpg" alt="Building renovation by RK Decorators" loading="lazy">
+                </div>
+                <div class="project-overlay">
+                    <div class="project-info">
+                        <h3>Building Renovation</h3>
+                        <p>Civil Construction</p>
+                        <span class="project-location">📍 Residential Complex</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Electrical Work -->
+            <div class="project-card" data-category="maintenance" onclick="openImageModal('assets/images/projects/electrical/electrical_work_1.jpg', 'Electrical Installation & Wiring', 'Professional electrical wiring and installation services with safety compliance')">
+                <div class="project-image">
+                    <img src="assets/images/projects/electrical/electrical_work_1.jpg" alt="Electrical work by RK Decorators" loading="lazy">
+                </div>
+                <div class="project-overlay">
+                    <div class="project-info">
+                        <h3>Electrical Installation</h3>
+                        <p>Wiring & Fixtures</p>
+                        <span class="project-location">📍 Commercial Property</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Plumbing Work -->
+            <div class="project-card" data-category="maintenance" onclick="openImageModal('assets/images/projects/plumbing/plumbing_work_1.jpg', 'Plumbing System Installation', 'Complete plumbing installation with modern fixtures and quality pipes')">
+                <div class="project-image">
+                    <img src="assets/images/projects/plumbing/plumbing_work_1.jpg" alt="Plumbing work by RK Decorators" loading="lazy">
+                </div>
+                <div class="project-overlay">
+                    <div class="project-info">
+                        <h3>Plumbing Installation</h3>
+                        <p>Pipeline & Fixtures</p>
+                        <span class="project-location">📍 New Construction</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- False Ceiling -->
+            <div class="project-card" data-category="interior-painting" onclick="openImageModal('assets/images/projects/false-ceiling/false_ceiling_1.jpg', 'False Ceiling Installation', 'Modern false ceiling design with lighting integration for office spaces')">
+                <div class="project-image">
+                    <img src="assets/images/projects/false-ceiling/false_ceiling_1.jpg" alt="False ceiling installation by RK Decorators" loading="lazy">
+                </div>
+                <div class="project-overlay">
+                    <div class="project-info">
+                        <h3>False Ceiling</h3>
+                        <p>Interior Design</p>
+                        <span class="project-location">📍 Corporate Office</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Waterproofing -->
+            <div class="project-card" data-category="exterior-painting" onclick="openImageModal('assets/images/projects/waterproofing/waterproofing_1.jpg', 'Waterproofing & Terrace Treatment', 'Professional waterproofing solution for terrace and exterior walls')">
+                <div class="project-image">
+                    <img src="assets/images/projects/waterproofing/waterproofing_1.jpg" alt="Waterproofing work by RK Decorators" loading="lazy">
+                </div>
+                <div class="project-overlay">
+                    <div class="project-info">
+                        <h3>Waterproofing</h3>
+                        <p>Terrace & Walls</p>
+                        <span class="project-location">📍 Residential Building</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Maintenance -->
+            <div class="project-card" data-category="maintenance" onclick="openImageModal('assets/images/projects/maintenance/maintenance_1.jpg', 'Building Maintenance Contract', 'Annual maintenance contract for complete building upkeep and repairs')">
+                <div class="project-image">
+                    <img src="assets/images/projects/maintenance/maintenance_1.jpg" alt="Building maintenance by RK Decorators" loading="lazy">
+                </div>
+                <div class="project-overlay">
+                    <div class="project-info">
+                        <h3>Building Maintenance</h3>
+                        <p>Annual Contract</p>
+                        <span class="project-location">📍 Commercial Complex</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Crack Repair -->
+            <div class="project-card" data-category="civil-works" onclick="openImageModal('assets/images/projects/crack-repair/crack_repair_1.jpg', 'Structural Crack Repair', 'Professional crack repair and wall treatment for structural integrity')">
+                <div class="project-image">
+                    <img src="assets/images/projects/crack-repair/crack_repair_1.jpg" alt="Crack repair work by RK Decorators" loading="lazy">
+                </div>
+                <div class="project-overlay">
+                    <div class="project-info">
+                        <h3>Crack Repair</h3>
+                        <p>Structural Work</p>
+                        <span class="project-location">📍 Old Building</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Texture Painting -->
+            <div class="project-card" data-category="interior-painting" onclick="openImageModal('assets/images/projects/texture-painting/texture_painting_1.jpg', 'Decorative Texture Painting', 'Artistic texture painting for unique wall finishes and decorative effects')">
+                <div class="project-image">
+                    <img src="assets/images/projects/texture-painting/texture_painting_1.jpg" alt="Texture painting by RK Decorators" loading="lazy">
+                </div>
+                <div class="project-overlay">
+                    <div class="project-info">
+                        <h3>Texture Painting</h3>
+                        <p>Decorative Walls</p>
+                        <span class="project-location">📍 Premium Home</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- View All Projects Button -->
+        <div class="projects-cta fade-in">
+            <a href="#contact" class="view-all-btn">View All Our Projects</a>
+            <p>Want to see your project here? <a href="tel:+919566413031" style="color: var(--india-green); font-weight: bold;">Call +91 95664 13031</a></p>
+        </div>
+    </div>
+</section>
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title fade-in">Serving Coimbatore with Pride – Reach Out Today!</h2>
+            <p class="section-subtitle fade-in">Contact RK Decorators for professional building maintenance and painting services in Coimbatore</p>
+            
+            <div class="contact-grid">
+                <div class="contact-info fade-in">
+                    <h3>Get In Touch</h3>
+                    
+                    <div class="contact-item">
+                        <span class="contact-icon">📍</span>
+                        <div>
+                            <strong>Address:</strong><br>
+                            RK Complex, 4-B, Lakshmipuram,<br>
+                            Ganapathy, Coimbatore – 641006
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <span class="contact-icon">📞</span>
+                        <div>
+                            <strong>Phone:</strong><br>
+                            <a href="tel:+919566413031">+91 95664 13031</a> |
+                            <a href="tel:+918825588359">+91 88255 88359</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <span class="contact-icon">📧</span>
+                        <div>
+                            <strong>Email:</strong><br>
+                            <a href="mailto:rkdecorators@gmail.com">rkdecorators@gmail.com</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <span class="contact-icon">💬</span>
+                        <div>
+                            <strong>WhatsApp:</strong><br>
+                            <a href="https://wa.me/919566413031?text=Hi%20RK%20Decorators%2C%20I%20need%20building%20maintenance%20service" target="_blank">+91 95664 13031</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <span class="contact-icon">🕒</span>
+                        <div>
+                            <strong>Business Hours:</strong><br>
+                            Mon-Sat: 10:00 am to 6:00 pm<br>
+                           
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="map-container fade-in">
+                    <div class="map-placeholder">
+                        <h3>📍 Find Us in Coimbatore</h3>
+                        <p>RK Complex, Ganapathy</p>
+                        <p>Professional painting & building maintenance services</p>
+                        <a href="https://maps.google.com/?q=RK+Complex+Lakshmipuram+Ganapathy+Coimbatore" target="_blank" style="color: var(--india-green); text-decoration: underline; margin-top: 1rem; display: inline-block;">View on Google Maps</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Modal -->
+    <div id="projectModal" class="project-modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeProjectModal()">&times;</span>
+            <h3 id="modalTitle">Project Details</h3>
+            <p id="modalContent">Loading project details...</p>
+            <div class="modal-actions">
+                <a href="tel:+919566413031" class="modal-cta">Get Similar Work Done</a>
+                <a href="#contact" class="modal-cta secondary" onclick="closeProjectModal()">Get Quote</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>RK Decorators</h3>
+                    <p>35+ years of trusted painting and building maintenance services in Coimbatore. Expert civil contractors for all your construction needs.</p>
+                    <p><strong>Founded by D. Rajesh Kumar</strong></p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Our Services</h3>
+                    <a href="#services">Interior Painting Coimbatore</a>
+                    <a href="#services">Exterior Painting Services</a>
+                    <a href="#services">Building Refurbishment</a>
+                    <a href="#services">Wood Polishing</a>
+                    <a href="#services">Aluminum Fabrication</a>
+                    <a href="#services">Electrical & Plumbing</a>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact Information</h3>
+                    <p><strong>Address:</strong> RK Complex, 4-B, Lakshmipuram, Ganapathy, Coimbatore – 641006</p>
+                    <p><strong>Phone:</strong> <a href="tel:+919566413031">+91 95664 13031</a></p>
+                    <p><strong>Alt Phone:</strong> <a href="tel:+918825588359">+91 88255 88359</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:rkdecorators@gmail.com">rkdecorators@gmail.com</a></p>
+                    <p><strong>WhatsApp:</strong> <a href="https://wa.me/919566413031" target="_blank">+91 95664 13031</a></p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Service Areas</h3>
+                    <p>Coimbatore, Ganapathy, Lakshmipuram</p>
+                    <p>Tamil Nadu, India</p>
+                    <p><strong>Specializing in:</strong></p>
+                    <p>• Painting contractors Coimbatore</p>
+                    <p>• Building maintenance services</p>
+                    <p>• Civil construction work</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 RK Decorators. All Rights Reserved. | Professional Painting & Building Maintenance Services in Coimbatore</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/919566413031?text=Hi%20RK%20Decorators%2C%20I%20need%20painting%20and%20building%20maintenance%20services%20in%20Coimbatore" target="_blank" class="whatsapp-float" title="Chat on WhatsApp - RK Decorators">💬</a>
+
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        mobileToggle.addEventListener('click', function() {
+            navLinks.classList.toggle('active');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    const offsetTop = targetElement.offsetTop - 80;
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+                
+                // Close mobile menu if open
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all fade-in elements
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Project filtering functionality
+        function filterProjects(category) {
+            const projectCards = document.querySelectorAll('.project-card');
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            
+            // Update active filter button
+            filterBtns.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            // Filter project cards
+            projectCards.forEach(card => {
+                if (category === 'all' || card.dataset.category === category) {
+                    card.style.display = 'block';
+                    card.style.opacity = '0';
+                    setTimeout(() => {
+                        card.style.opacity = '1';
+                        card.style.transform = 'translateY(0)';
+                    }, 100);
+                } else {
+                    card.style.opacity = '0';
+                    card.style.transform = 'translateY(20px)';
+                    setTimeout(() => {
+                        card.style.display = 'none';
+                    }, 300);
+                }
+            });
+            
+            // Track filter usage for analytics
+            console.log('Project filter applied:', category);
+        }
+
+        // Image modal functionality
+        function openImageModal(imageSrc, title, description) {
+            // Create modal if it doesn't exist
+            let modal = document.getElementById('imageModal');
+            if (!modal) {
+                modal = document.createElement('div');
+                modal.id = 'imageModal';
+                modal.className = 'image-modal';
+                modal.innerHTML = `
+                    <div class="image-modal-content">
+                        <div class="image-modal-header">
+                            <div>
+                                <h3 id="imageModalTitle"></h3>
+                                <p id="imageModalDescription"></p>
+                            </div>
+                            <button class="modal-close" onclick="closeImageModal()">&times;</button>
+                        </div>
+                        <div class="image-placeholder-large" id="imageModalPlaceholder">
+                            <span class="placeholder-icon">📸</span>
+                            <div>Project Image Placeholder</div>
+                            <small>Actual project photos available on site visit</small>
+                        </div>
+                        <div class="image-actions">
+                            <a href="tel:+919566413031" class="image-action-btn">Get Similar Work Done</a>
+                            <a href="#contact" class="image-action-btn secondary" onclick="closeImageModal()">Request Quote</a>
+                        </div>
+                    </div>
+                `;
+                document.body.appendChild(modal);
+                
+                // Close modal when clicking outside
+                modal.addEventListener('click', function(e) {
+                    if (e.target === modal) {
+                        closeImageModal();
+                    }
+                });
+            }
+            
+            // Update modal content
+            document.getElementById('imageModalTitle').textContent = title;
+            document.getElementById('imageModalDescription').textContent = description;
+            
+            // Show modal
+            modal.classList.add('show');
+            document.body.style.overflow = 'hidden';
+            
+            // Track image modal opens for analytics
+            console.log('Image modal opened:', title);
+        }
+
+        function closeImageModal() {
+            const modal = document.getElementById('imageModal');
+            if (modal) {
+                modal.classList.remove('show');
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeImageModal();
+            }
+        });
+
+        // Add click tracking for SEO and conversion optimization
+        document.querySelectorAll('.cta-button, .hero-cta, .modal-cta').forEach(button => {
+            button.addEventListener('click', function(e) {
+                // Track CTA clicks for analytics
+                console.log('CTA clicked:', this.textContent, 'URL:', this.href);
+                
+                // Add Google Analytics event tracking here if needed
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'click', {
+                        'event_category': 'CTA',
+                        'event_label': this.textContent
+                    });
+                }
+            });
+        });
+
+        // Track phone number clicks
+        document.querySelectorAll('a[href^="tel:"]').forEach(phone => {
+            phone.addEventListener('click', function() {
+                console.log('Phone clicked:', this.href);
+                
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'phone_call', {
+                        'event_category': 'Contact',
+                        'event_label': this.href
+                    });
+                }
+            });
+        });
+
+        // Track WhatsApp clicks
+        document.querySelectorAll('a[href*="wa.me"]').forEach(whatsapp => {
+            whatsapp.addEventListener('click', function() {
+                console.log('WhatsApp clicked:', this.href);
+                
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'whatsapp_chat', {
+                        'event_category': 'Contact',
+                        'event_label': 'WhatsApp'
+                    });
+                }
+            });
+        });
+
+        // Add breadcrumb schema
+        const breadcrumbSchema = {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Home",
+                    "item": "https://rkdecorators.com"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Services",
+                    "item": "https://rkdecorators.com#services"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "name": "Contact",
+                    "item": "https://rkdecorators.com#contact"
+                }
+            ]
+        };
+
+        // Add FAQ schema for better SEO
+        const faqSchema = {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "What painting services do you offer in Coimbatore?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "We offer comprehensive painting services including interior painting, exterior painting, wood polishing, texture painting, and building refurbishment in Coimbatore."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "How long has RK Decorators been in business?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "RK Decorators has been serving Coimbatore for over 35 years, founded by D. Rajesh Kumar, providing trusted painting and building maintenance services."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Do you provide free estimates?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes, we provide free estimates for all our painting and building maintenance services. Contact us at +91 95664 13031 for a free consultation."
+                    }
+                }
+            ]
+        };
+
+        // Add schemas to page
+        const breadcrumbScript = document.createElement('script');
+        breadcrumbScript.type = 'application/ld+json';
+        breadcrumbScript.textContent = JSON.stringify(breadcrumbSchema);
+        document.head.appendChild(breadcrumbScript);
+
+        const faqScript = document.createElement('script');
+        faqScript.type = 'application/ld+json';
+        faqScript.textContent = JSON.stringify(faqSchema);
+        document.head.appendChild(faqScript);
+
+        // Performance optimization
+        window.addEventListener('load', function() {
+            // Preload critical resources
+            const criticalLinks = [
+                'tel:+919566413031',
+                'https://wa.me/919566413031',
+                'mailto:rkdecorators@gmail.com'
+            ];
+            
+            // Add loading performance tracking
+            const loadTime = performance.now();
+            console.log('Page load time:', loadTime + 'ms');
+        });
+    </script>
+
+    <!-- Modal Styles -->
+    <style>
+        .project-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(17, 23, 24, 0.9);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(5px);
+        }
+        
+        .modal-content {
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            max-width: 600px;
+            width: 90%;
+            position: relative;
+            box-shadow: 0 25px 60px rgba(0,0,0,0.3);
+            animation: modalSlideIn 0.3s ease-out;
+        }
+        
+        @keyframes modalSlideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-30px) scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+        
+        .close-modal {
+            position: absolute;
+            top: 1rem;
+            right: 1.5rem;
+            font-size: 2rem;
+            cursor: pointer;
+            color: #666;
+            transition: color 0.3s ease;
+        }
+        
+        .close-modal:hover {
+            color: var(--india-green);
+        }
+        
+        .modal-content h3 {
+            color: var(--india-green);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        
+        .modal-content p {
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            color: var(--night);
+        }
+        
+        .modal-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+        
+        .modal-cta {
+            background: linear-gradient(45deg, var(--india-green), #22c55e);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+        
+        .modal-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(17, 132, 23, 0.3);
+        }
+        
+        .modal-cta.secondary {
+            background: transparent;
+            border: 2px solid var(--india-green);
+            color: var(--india-green);
+        }
+        
+        .modal-cta.secondary:hover {
+            background: var(--india-green);
+            color: white;
+        }
+        
+        @media (max-width: 768px) {
+            .modal-content {
+                padding: 2rem;
+                margin: 1rem;
+            }
+            
+            .modal-actions {
+                flex-direction: column;
+            }
+        }
+    </style>
+</body>
+</html>
